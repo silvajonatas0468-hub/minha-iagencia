@@ -284,12 +284,13 @@ footer a{color:#b0a8a2}
 
 /* fases (4 dores) */
 .fases{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
-.fase{background:var(--papel);color:var(--tinta);border:2px solid var(--papel);border-radius:18px;padding:16px 14px 18px;display:flex;flex-direction:column;gap:8px}
+.fase{background:var(--brasa);color:var(--tinta);border:2px solid var(--brasa);border-radius:18px;padding:16px 14px 18px;display:flex;flex-direction:column;gap:8px}
 .fase.escura{background:#0b0b0c;color:#d9d4d0;border-color:#3a3836}
-.fase .chip{align-self:flex-start;background:var(--brasa);color:#fff;font-family:var(--display);font-weight:700;font-size:10.5px;letter-spacing:.1em;border-radius:999px;padding:4px 10px}
+.fase .chip{align-self:flex-start;background:var(--tinta);color:#fff;font-family:var(--display);font-weight:700;font-size:10.5px;letter-spacing:.1em;border-radius:999px;padding:4px 10px}
+.fase.escura .chip{background:var(--brasa)}
 .fase h3{font-size:21px;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;line-height:1}
 .fase.escura h3{color:#fff}
-.fase p{font-size:14px;line-height:1.35;color:#3d3d42}
+.fase p{font-size:14px;line-height:1.35;color:#1f0f09}
 .fase.escura p{color:#b0a8a2}
 @media (min-width:640px){.fase h3{font-size:24px}.fase p{font-size:15px}}
 /* ===== transições ao rolar ===== */
@@ -347,9 +348,9 @@ footer a{color:#b0a8a2}
 
     <div class="fases" aria-label="O que o agente resolve">
       <div class="fase"><span class="chip">FASE 1</span><h3>Achar</h3><p>O radar varre as fontes do seu nicho e o que está viralizando lá fora.</p></div>
-      <div class="fase escura"><span class="chip">FASE 2</span><h3>Filtrar</h3><p>Só passa o assunto quente, com fonte, que cabe na sua tese.</p></div>
+      <div class="fase"><span class="chip">FASE 2</span><h3>Filtrar</h3><p>Só passa o assunto quente, com fonte, que cabe na sua tese.</p></div>
       <div class="fase"><span class="chip">FASE 3</span><h3>Criar</h3><p>Roteiro, Reel e legenda na sua estrutura e na sua voz.</p></div>
-      <div class="fase"><span class="chip">FASE 4</span><h3>Publicar</h3><p>No horário certo, com a sua revisão ou no automático.</p></div>
+      <div class="fase escura"><span class="chip">FASE 4</span><h3>Publicar</h3><p>No horário certo, com a sua revisão ou no automático.</p></div>
     </div>
 
         <a class="cta" href="https://pay.hub.la/dJmPebxkkzhau9V0CrV0">Quero minha IA-gência · R$ 47
