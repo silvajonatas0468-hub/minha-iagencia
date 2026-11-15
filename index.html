@@ -281,6 +281,17 @@ footer a{color:#b0a8a2}
   .cta{font-size:16px;padding-left:20px}
 }
 
+
+/* fases (4 dores) */
+.fases{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.fase{background:var(--papel);color:var(--tinta);border:2px solid var(--papel);border-radius:18px;padding:16px 14px 18px;display:flex;flex-direction:column;gap:8px}
+.fase.escura{background:#0b0b0c;color:#d9d4d0;border-color:#3a3836}
+.fase .chip{align-self:flex-start;background:var(--brasa);color:#fff;font-family:var(--display);font-weight:700;font-size:10.5px;letter-spacing:.1em;border-radius:999px;padding:4px 10px}
+.fase h3{font-size:21px;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;line-height:1}
+.fase.escura h3{color:#fff}
+.fase p{font-size:14px;line-height:1.35;color:#3d3d42}
+.fase.escura p{color:#b0a8a2}
+@media (min-width:640px){.fase h3{font-size:24px}.fase p{font-size:15px}}
 /* ===== transições ao rolar ===== */
 .js .rv{opacity:0;transform:translateY(42px);filter:blur(6px)}
 .js .rv.in{opacity:1;transform:none;filter:none;transition:opacity 1s cubic-bezier(.2,.8,.2,1) var(--d,0ms),transform 1.15s cubic-bezier(.16,1,.3,1) var(--d,0ms),filter 1s ease var(--d,0ms)}
@@ -296,8 +307,8 @@ footer a{color:#b0a8a2}
 .js .hero h1 .hl{animation:risca 1.1s cubic-bezier(.7,0,.2,1) 1s both}
 @keyframes risca{from{background-size:0 .07em}to{background-size:100% .07em}}
 /* entrada do topo */
-.js .hero .logo,.js .hero .badge,.js .hero .sub,.js .hero .tiles,.js .hero .cta,.js .hero .cta-note,.js .hero .log{opacity:0;transform:translateY(24px);filter:blur(6px);animation:sobe 1.1s cubic-bezier(.16,1,.3,1) forwards}
-.js .hero .badge{animation-delay:.1s}.js .hero .sub{animation-delay:.55s}.js .hero .tiles{animation-delay:.7s}.js .hero .cta{animation-delay:.82s}.js .hero .cta-note{animation-delay:.9s}.js .hero .log{animation-delay:1s}
+.js .hero .logo,.js .hero .badge,.js .hero .sub,.js .hero .tiles,.js .hero .fase,.js .hero .cta,.js .hero .cta-note,.js .hero .log{opacity:0;transform:translateY(24px);filter:blur(6px);animation:sobe 1.1s cubic-bezier(.16,1,.3,1) forwards}
+.js .hero .badge{animation-delay:.1s}.js .hero .sub{animation-delay:.55s}.js .hero .tiles{animation-delay:.7s}.js .hero .fase{animation-delay:calc(.8s + var(--n,0)*.09s)}.js .hero .fase:nth-child(2){--n:1}.js .hero .fase:nth-child(3){--n:2}.js .hero .fase:nth-child(4){--n:3}.js .hero .cta{animation-delay:1.15s}.js .hero .cta-note{animation-delay:1.25s}.js .hero .log{animation-delay:1.35s}
 @keyframes sobe{to{opacity:1;transform:none;filter:none}}
 .js .hero h1 .wi{animation:palavra 1.05s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(.2s + var(--i,0)*45ms)}
 @keyframes palavra{from{transform:translateY(108%)}to{transform:none}}
@@ -332,6 +343,13 @@ footer a{color:#b0a8a2}
       <div class="tile"><small>Produção</small><strong>Até 10 Reels por dia</strong></div>
       <div class="tile"><small>Onde roda</small><strong>No seu Claude</strong></div>
       <div class="tile"><small>Seu papel</small><strong>Aprovar</strong></div>
+    </div>
+
+    <div class="fases" aria-label="O que o agente resolve">
+      <div class="fase"><span class="chip">FASE 1</span><h3>Achar</h3><p>O radar varre as fontes do seu nicho e o que está viralizando lá fora.</p></div>
+      <div class="fase escura"><span class="chip">FASE 2</span><h3>Filtrar</h3><p>Só passa o assunto quente, com fonte, que cabe na sua tese.</p></div>
+      <div class="fase"><span class="chip">FASE 3</span><h3>Criar</h3><p>Roteiro, Reel e legenda na sua estrutura e na sua voz.</p></div>
+      <div class="fase"><span class="chip">FASE 4</span><h3>Publicar</h3><p>No horário certo, com a sua revisão ou no automático.</p></div>
     </div>
 
         <a class="cta" href="https://pay.hub.la/dJmPebxkkzhau9V0CrV0">Quero minha IA-gência · R$ 47
